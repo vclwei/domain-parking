@@ -45,8 +45,9 @@
       <h1 class="title">Hello,</h1>
       <h1 class="title">You.</h1>
       <p id="domain" class="font"></p>
-      <p class="font">Contact:</p>
-      <a id="subject" class="font">idlebugz@gmail.com</a>
+      <p class="font">Contact: 
+        <a id="subject" class="font">idlebugz@gmail.com</a>
+      </p>
     </div>
     <script type="text/javascript">
       const fun = {
@@ -54,8 +55,8 @@
           const domain = window.location.host
           document.title = domain
           document.getElementById('domain').innerHTML = domain
-            ? `🇺🇦  ${domain}`
-            : 'Domain'
+            ? "🇺🇦 &nbsp;&nbsp;" + domain
+            : "🇺🇦 &nbsp;&nbsp;" + "Domain"
           document.getElementById(
             'subject'
           ).href = `mailto:idelbugz@gmail.com?subject=Domain%20${domain}`

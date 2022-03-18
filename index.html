@@ -54,9 +54,17 @@
         init: () => {
           const domain = window.location.host
           document.title = domain
-          document.getElementById('domain').innerHTML = domain
-            ? "🇺🇦 &nbsp;&nbsp;" + domain
-            : "🇺🇦 &nbsp;&nbsp;" + "Domain"
+          let domain_txt = domain
+            ? domain
+            : "Domain"
+          if(domain_txt == "v.day"){
+            domain_txt = "🇺🇦&nbsp;&nbsp;" + domain_txt
+          }
+          else{
+            domain_txt = domain_txt + "&nbsp;For&nbsp;Sale"
+          }
+
+          document.getElementById('domain').innerHTML = domain_txt
           document.getElementById(
             'subject'
           ).href = `mailto:idelbugz@gmail.com?subject=Domain%20${domain}`

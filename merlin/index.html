@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>MeiLin</title>
+    <title>domain</title>
     <style>
       .body {
         padding: 0;
@@ -59,6 +59,7 @@
               colorList[Math.floor(Math.random() * 5)]
             )
           const domain = window.location.host
+          document.title = domain
           document.getElementById('domain').innerHTML = domain
             ? domain
             : 'Domain'

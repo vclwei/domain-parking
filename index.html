@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Vday</title>
+    <title>domain</title>
     <style>
       .body {
         padding: 0;
@@ -52,6 +52,7 @@
       const fun = {
         init: () => {
           const domain = window.location.host
+          document.title = domain
           document.getElementById('domain').innerHTML = domain
             ? domain
             : 'Domain'

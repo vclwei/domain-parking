@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MeiLin</title>
+    <style>
+      .body {
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+      .bg {
+        height: 100vh;
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: center;
+      }
+      .content {
+        width: 40rem;
+        text-align: center;
+      }
+      .img {
+        width: 40rem;
+        height: 40rem;
+        margin-top: 5vh;
+      }
+      .font {
+        font-size: 14px;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        margin-top: 1rem;
+        text-align: center;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body class="bg">
+    <div class="content">
+      <img src="./meilin.png" class="img" alt="" />
+      <p id="domain" class="font"></p>
+      <p class="font">Contact:</p>
+      <a id="subject" class="font">idlebugz@gmail.com</a>
+    </div>
+    <script type="text/javascript">
+      const fun = {
+        init: () => {
+          const colorList = [
+            '#939391',
+            '#8696a7',
+            '#7b8b6f',
+            '#6b5152',
+            '#7a7281'
+          ]
+          document
+            .querySelector('.bg')
+            .style.setProperty(
+              '--bg-color',
+              colorList[Math.floor(Math.random() * 5)]
+            )
+          const domain = window.location.host
+          document.getElementById('domain').innerHTML = domain
+            ? domain
+            : 'Domain'
+          document.getElementById(
+            'subject'
+          ).href = `mailto:idelbugz@gmail.com?subject=Domain%20${domain}`
+        }
+      }
+      fun.init()
+    </script>
+  </body>
+</html>
